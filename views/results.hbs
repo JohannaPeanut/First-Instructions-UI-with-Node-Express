@@ -1,0 +1,26 @@
+
+    <section class="first-section">
+      <div class="big-input-div">
+        <form action="/results">
+          <span>How to </span>
+          <input placeholder=" {{ result.question }}" name="term" id="request" class="fire-cursor" />
+          <button class="ask-button">ASK</button >
+        </form>
+      </div>
+    </section>
+    <section class="second-section">
+      <div class="tutorial-text">
+        <p class="tutorial-paragraph">
+            {{!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, natus cum modi eligendi cupiditate labore, vel voluptates illo a doloremque nihil ipsum unde architecto, quaerat voluptatibus. Ratione perspiciatis laudantium ducimus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro repellendus deleniti quaerat error minus perspiciatis eius, incidunt nemo alias dignissimos quae placeat quod, natus itaque. Atque explicabo saepe ipsum unde.
+            Lorem   
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, enim reiciendis non culpa numquam quae ab ex modi dolorem delectus dolorum nihil soluta rem cum quia. Laborum dolorem corrupti similique! --}}
+         {{ result.resultAPI.data }}
+        </p>
+      </div>
+    </section>
+    <footer>
+      <button class="feedback-button rotate15 fire-cursor">FEEDBACK</button>
+      <button class="imprint-button fire-cursor">IMPRINT</button>
+    </footer>
+    
