@@ -3,10 +3,6 @@ const axios = require('axios');
 
 const app = express();
 
-const openaiUrl= 'https://api.openai.com/v1/engines';
-const API_KEY = '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';
-const ORG_ID = 'org-P533oUUjUCTr4feSPvlg7VKW';
-
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
@@ -21,7 +17,11 @@ app.get('/', (request, response) => {
 app.get('/results', (req, res) => {
   //res.render('results')
   const term = "How to " + req.query.term;
-  const urlHowToAI = 'http://3.68.197.29:8000/answers?user_prompt=' + term.replace(/ /g, "%20") + '&length=300';
+  let length = req.query.length;
+  console.log(typeof length)
+  if(!length) length = 300;
+  console.log(length);
+  const urlHowToAI = 'http://3.68.197.29:8000/answers?user_prompt=' + term.replace(/ /g, "%20") + String(length);
   axios({
     url: urlHowToAI,
     method: 'get',

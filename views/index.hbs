@@ -3,6 +3,12 @@
         <form action="/results">
           <span>How to </span>
           <input placeholder="..." name="term" id="request" class="fire-cursor" autofocus />
+          <div class="range-div">
+          <input type="range" id="length" name="length" min="24" max="600" list="tickmarks" class="range">
+          <span class="labelRangeInput"> 312 </span>
+          <span class="labelRangeInput" id="label-no-margin"> words </span>
+          </div>
+          <input type="button" />
           <button  class="ask-button">ASK</button>
         </form>
       </div>
