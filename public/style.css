@@ -72,11 +72,10 @@ button {
   padding: 0 1.5em;
 }
 
-header button {
+.info-button {
   font-family: Arapey, Times, serif;
   font-style: italic;
   background-color: var(--color);
-  position: fixed;
   border: none;
 }
 
@@ -91,17 +90,26 @@ header div {
   margin-top: 50px;
 }
 
-header p {
-  font-family: inherit;
-  font-size: 1.5em;
-}
-
 .invisible {
   display: none;
 }
 
 .visible {
   display: '';
+}
+
+#home-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 10em;
+}
+
+#home-link a{
+color: #000000;
+font-family: Roboto, Arial, sans-serif;
+text-decoration: none;
+font-size: 2em;
 }
 
 aside div {
@@ -125,7 +133,7 @@ aside div {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  height: 45vh;
+  height: 35vh;
 }
 
 .big-input-div {
@@ -227,7 +235,7 @@ input:focus {
 }
 
 footer {
-  position: relative;
+  margin-top: 10em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -18,9 +18,7 @@ app.get('/results', (req, res) => {
   //res.render('results')
   const term = "How to " + req.query.term;
   let length = req.query.length;
-  console.log(typeof length)
   if(!length) length = 300;
-  console.log(length);
   const urlHowToAI = 'http://3.68.197.29:8000/answers?user_prompt=' + term.replace(/ /g, "%20") + String(length);
   axios({
     url: urlHowToAI,
