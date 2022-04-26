@@ -6,8 +6,11 @@ const inputDivElement = document.querySelector('.big-input-div');
 const tutorialDivElement = document.querySelector('.tutorial-text');
 const tutorialParElement = document.querySelector('.tutorial-paragraph');
 const firstSectionElement = document.querySelector('section');
+const askButtonElement = document.querySelector('.ask-button');
 const rangeElement = document.querySelector('.range');
 const rangeLabelElement = document.querySelector('.labelRangeInput')
+
+///// sticky How-To-Form
 
 // window.addEventListener('scroll', () => {
 //   let rect = inputDivElement.getBoundingClientRect();
@@ -21,8 +24,16 @@ const rangeLabelElement = document.querySelector('.labelRangeInput')
 //   //   }
 // });
 
+//// disable ASK-button when clicked once - not working ??
+
+askButtonElement.addEventListener('submit', () => {
+  //this.disabled = true;
+  console.log('submit function called')
+});
+
+
 infoButtonElement.addEventListener('click', () => {
-  console.log('click')
+  
   if (infoDivElement.classList.contains('invisible')) {
     infoDivElement.classList.remove('invisible');
     infoDivElement.classList.add('visible');
