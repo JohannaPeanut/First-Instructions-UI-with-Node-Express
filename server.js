@@ -20,7 +20,7 @@ app.get('/results', (req, res) => {
   const term = "How to " + req.query.term;
   let length = req.query.length;
   if(!length) length = 300;
-  const urlHowToAI = 'http://3.122.247.117:8000/answers?user_prompt=' + term.replace(/ /g, "%20") + String(length);
+  const urlHowToAI = 'http://164.92.135.174/answers?user_prompt=' + term.replace(/ /g, "%20") + String(length);
   axios({
     url: urlHowToAI,
     method: 'get',
@@ -34,11 +34,6 @@ app.get('/results', (req, res) => {
   res.render('results', { result : { resultAPI : response.data, question : req.query.term}})
 });
 });
-
-
-
-
-
 
 // function testHowToAI(term) {
 //   const urlHowToAI = 'http://3.68.197.29:8000/answers?user_prompt=' + term.replace(/ /g, "%20") + '&length=300';
