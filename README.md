@@ -2,6 +2,8 @@
 
 Link: https://how-to-generator.herokuapp.com/
 
+A project by: Asís Ybarra & Johanna Michel
+
 About: The project with the working title "1st Instructions" deals with questions of human and machine learning, with artificial intelligence and aspects of "becoming human".
 
 Enter a "How to"-question and an AI will generate a tutorial text in real time.
